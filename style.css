@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Merriweather:wght@300&family=Oswald&family=Roboto+Mono&display=swap');
+
+
+ /* font-family: 'Comfortaa', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto Mono', monospace;*/
+
+
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+ 
+}
+
+body {
+  width: 100vw;
+  color:black;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /*background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);*/
+}
+
+
+
+ /*MENU DESPLEABLE*/
+
+ a
+{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+   
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+ 
+  
+}
+
+.header
+{
+    background-color: #ffff;
+    box-shadow: -1px 13px 23px -8px rgba(0,0,0,0.39);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo
+{
+    display: inline-block;
+    color:#3E413D;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.nav
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #D3D8D2;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    
+}
+
+.menu
+{
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.menu a
+{
+    display: block;
+    padding: 10px;
+    color: #3E413D;
+   
+}
+
+.menu a:hover
+{
+    border-bottom: solid 2px #3E413D;
+}
+
+.hamb
+{
+    cursor: pointer;
+    float: right;
+    padding: 25px 20px;
+}
+
+
+.hamb-line 
+{
+    background: #3E413D;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after
+{
+    background: #3E413D;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before
+{
+    top: 5px;
+}
+
+.hamb-line::after
+{
+    top: -5px;
+}
+
+.side-menu 
+{
+    display: none;
+}
+
+.side-menu:checked ~ nav
+{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line 
+{
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before 
+{
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after 
+{
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (min-width: 768px)
+{
+    .nav
+    {   display: flex;
+        flex-direction: column;
+        max-height: none;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+        
+        
+    }
+
+    .menu{
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        
+    }
+    
+    .menu a:hover
+    {
+        background-color: transparent;
+        border-bottom: solid 2px #3E413D;
+    }
+
+    .hamb
+    {
+        display: none;
+    }
+}
+
+
+
+
+/* SECCION BANNER */
+
+.banner-home{
+  width: 100%;
+  height: 40vh;
+  background-image: url(./assets/images/banner-libros2.jpg);
+  background-size: cover;
+  background-position-y: calc(55%);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.text-banner h1{
+    color: #3E413D;
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    font-style: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 55%;
+    margin-bottom: 3%;
+}
+
+.text-banner h2 {
+    color: #3E413D;
+    font-family: 'Comfortaa', cursive;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-top: 5%;
+    text-align: center;  
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.main-content{
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    background-color:#C3C2C0;
+    padding: 20px;
+    
+}
+
+.main-content h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.main-content p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+
+}
+h4{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.news-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100vw;
+}
+
+.new-card{
+    padding: 20px;
+    width: 30%;
+    
+}
+.new-card img{
+ width: 100%;
+
+}
+
+.new-card p{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-size: 12px;
+}
+
+.autor-container{
+    display: flex;
+    
+}
+
+.autor-container img{
+    display: flex;
+    width: 40%;
+}
+
+.autor-content{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    align-content: center;
+    padding: 20px;
+}
+
+.autor-content p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+
+}
+
+footer {
+    background-color: #5c5858;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    font-size: 12px;
+  }
+  /*RESPONSIVE PARA TABLETAS*/
+
+  @media screen and (min-width: 768px)  and (max-width: 920px) {
+    .text-banner h1{
+        font-size: 45px;
+    }
+    
+    .text-banner h2 {
+        font-size: 18px;
+    }
+    
+    .main-content{
+        padding-top: 5%;
+        padding: 20px;
+    }
+    
+    .main-content h3 {
+        font-size: 26px;
+        margin: 30px;
+        font-weight: bold;
+        
+    }
+    
+    h4{
+        font-size: 35px;
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
+
+    .news-container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        width: 100vw;
+    }
+    
+    .new-card p{
+        padding-top: 8px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+
+    .autor-content p {
+        font-size: 20px;
+    }
+  }
+
+
+/*RESPONSIVE PARA DESKTOP NORMALES*/
+ 
+@media screen and (min-width: 1024px)  and (max-width: 1280px){
+
+.banner-home{
+    height: 80vh;
+    background-position-y: calc(62%);
+  }
+  
+  .text-banner h1{
+      font-size: 45px;
+      margin-top: 40%;
+  }
+  
+  .text-banner h2 {
+      font-size: 20px;
+  }
+  
+  .main-content{
+      height: 35vh;
+      background-color: #C3C2C0;
+      padding: 45px 20px 20px 20px;
+      
+  }
+  
+  .main-content h3 {
+      font-size: 25px;
+  }
+  
+  .main-content p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+  }
+
+  h4{
+      font-size: 38px;
+      padding-top: 3%;
+      padding-bottom: 3%;
+  }
+ 
+.news-container{
+    justify-content: space-evenly;
+}
+  .new-card {
+    width: 25%;
+  }
+
+  .new-card p{
+      font-size: 20px;
+  }
+   
+  .autor-container img{
+      width: 250px;
+  }
+  
+  .autor-content p {
+      font-size: 16px;
+    }
+  } 
+
+/*RESPONSIVE PARA DESKTOP GRANDES*/
+
+@media screen and (min-width: 1025px){
+
+
+.banner-home{
+    height: 85vh;
+    background-position-y: calc(64%);
+    
+  }
+  
+  .text-banner h1{
+      font-size: 50px;
+      font-style: bold;
+      letter-spacing: 3px;
+      text-align: center;
+      margin-top: 40%;
+      margin-bottom: 3%;
+  }
+  
+  .text-banner h2 {
+      font-size: 15px; 
+  }
+  
+
+  .main-content{
+      height: 30vh;
+      background-color: #C3C2C0;
+      padding: 50px 20px 20px 20px;
+      
+  }
+  
+  .main-content h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+  }
+
+  .main-content p {
+    font-size: 18px;
+    font-family: 'Comfortaa', cursive;
+}
+  
+  h4{
+      font-family: 'Comfortaa', cursive;
+      font-size: 35px;
+      text-align: center;
+      padding-bottom: 25px;
+      padding-top: 20px;
+  }
+  .news-container{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+      width: 100vw;
+  }
+  
+  .new-card{
+      width: 20%;   
+  }
+
+  .autor-container{
+    display: flex;
+    align-content: center;
+    width: 100%;
+  }
+
+  .autor-container img{
+      width: 300px;
+
+  }
+  
+  .autor-content{
+      width: 100%;
+  }
+  
+  .autor-content p {
+      font-family: 'Comfortaa', cursive;
+      font-size: 18px;
+
+  
+  }
+
+
+}
+
+
+  
+

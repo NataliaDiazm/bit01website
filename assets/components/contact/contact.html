@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Inicio</title>
+</head>
+<body>
+  <header class="header">
+    <a href="/index.html" class="logo">RC</a>
+    <input type="checkbox" id="side-menu" class="side-menu" />
+    <label for="side-menu" class="hamb"
+      ><span class="hamb-line"></span
+    ></label>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/assets/components/about/about.html">Acerca de</a></li>
+        <li><a href="/assets/components/reviews/reviews.html">Reseñas</a></li>
+        <li><a href="/assets/components/contact/contact.html">Contáctenos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  </header>
+
+  <section class="banner-home">
+    <div class="text-banner">
+      <h1>RCBOK</h1>
+      <hr />
+      <h2>UNETE</h2>
+    </div>
+  </section>
+
+<section class="form-container">
+  <form id="myForm" class="form-content">
+  <h2>Formulario de contácto</h2>
+  <label for="nombre">Nombre
+    <input type="text" name="nombre"required id="nombre" >
+  </label>
+  <br>
+  
+  <label for="telefono">Teléfono
+    <input type="tel" name="telefono" required id="telefono" >
+  </label>
+  <br>
+
+  <label for="email">Email
+    <input type="email" name="email" required id="email" >
+  </label>
+  <br>
+  
+  <label>
+    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Dejanos tu mensaje"></textarea>
+  </label>
+
+  <button type="submit">Enviar</button>
+</form>
+</section>
+<br>
+<section class="ilustracion-container">
+  <img src="/assets/images/ilustracion.png" alt="ilustracion">
+  <div class="ilustracion-content">
+    <p>Haz parte de nuestra comunidad</p>
+  </div>
+</section>
+<br>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="closed">&times;</span>
+    <h4>Gracias por contactarnos!</h4>
+    <p>Tus datos han sido enviados correctamente <br> Nos pondremos en contacto pronto</p>
+  </div>
+</div>
+
+
+<footer>
+  <p>&copy; 2023, Desarrolladora Natalia Diaz - Todos los derechos reservados</p>
+</footer>
+  
+
+<script src="./contact.js"></script>
+</body>
+  

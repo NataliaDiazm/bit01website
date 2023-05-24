@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Merriweather:wght@300&family=Oswald&family=Roboto+Mono&display=swap');
+
+
+ /* font-family: 'Comfortaa', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto Mono', monospace;*/
+
+
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+ 
+}
+
+body {
+  width: 100vw;
+  color:black;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /*background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);*/
+}
+
+
+
+ /*MENU DESPLEABLE*/
+
+ a
+{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+   
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+ 
+  
+}
+
+.header
+{
+    background-color: #ffff;
+    box-shadow: -1px 13px 23px -8px rgba(0,0,0,0.39);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo
+{
+    display: inline-block;
+    color:#3E413D;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.nav
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #D3D8D2;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    
+}
+
+.menu
+{
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.menu a
+{
+    display: block;
+    padding: 10px;
+    color: #3E413D;
+   
+}
+
+.menu a:hover
+{
+    border-bottom: solid 2px #3E413D;
+}
+
+.hamb
+{
+    cursor: pointer;
+    float: right;
+    padding: 25px 20px;
+}
+
+
+.hamb-line 
+{
+    background: #3E413D;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after
+{
+    background: #3E413D;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before
+{
+    top: 5px;
+}
+
+.hamb-line::after
+{
+    top: -5px;
+}
+
+.side-menu 
+{
+    display: none;
+}
+
+.side-menu:checked ~ nav
+{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line 
+{
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before 
+{
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after 
+{
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (min-width: 768px)
+{
+    .nav
+    {   display: flex;
+        flex-direction: column;
+        max-height: none;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+        border: solid 2px red;
+        
+        
+    }
+
+    .menu{
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    
+    .menu a:hover
+    {
+        background-color: transparent;
+        border-bottom: solid 2px #3E413D;
+    }
+
+    .hamb
+    {
+        display: none;
+    }
+}
+
+
+
+
+/* SECCION BANNER */
+
+.banner-home{
+  width: 100%;
+  height: 40vh;
+  background-image: url(./assets/images/banner-libros2.jpg);
+  background-size: cover;
+  background-position-y: calc(65%);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.text-banner h1{
+    color: #3E413D;
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    font-style: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 55%;
+    margin-bottom: 3%;
+}
+
+.text-banner h2 {
+    color: #3E413D;
+    font-family: 'Comfortaa', cursive;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-top: 5%;
+    text-align: center;  
+}
