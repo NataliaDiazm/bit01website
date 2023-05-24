@@ -200,7 +200,7 @@ ul
 .banner-home{
   width: 100%;
   height: 30vh;
-  background-image: url(/assets/images/banner-libros.jpg);
+  background-image: url(../../images/banner-libros.jpg);
   background-size: cover;
   background-position: bottom bottom;
   display: flex;
@@ -260,7 +260,7 @@ ul
 
 
 .banner-about{
-   background-image: url(/assets/images/veronika-jorjobert-26I3q-FNpgA-unsplash.jpg);
+   background-image: url(../../images/veronika-jorjobert-26I3q-FNpgA-unsplash.jpg);
    background-size: cover;
    background-attachment: fixed;
     width: 100%;

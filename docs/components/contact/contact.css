@@ -239,7 +239,7 @@ ul
     margin: 0;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(/assets/images/banner-libros3.jpg);
+    background-image: url(../../images/banner-libros3.jpg);
     background-size: cover;
     padding: 20px;
 
