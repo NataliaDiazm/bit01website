@@ -8,6 +8,8 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
   const nombre = document.getElementById("nombre").value;
   const email = document.getElementById("email").value;
   const mensaje = document.getElementById("mensaje").value;
+  const datosModal = document.getElementById("datos-modal");
+  datosModal.textContent = nombre;
   modal.style.display = "block";
 
   console.log("Nombre:", nombre);

@@ -265,7 +265,16 @@ ul
 width: 100%;
 border: none;
 border-bottom: solid 1px #3E413D; 
-padding-bottom: 15px;
+
+}
+
+input {
+    padding-top: 5px;
+}
+
+label {
+    padding-bottom: 15px;
+
 }
 
 h2{
@@ -317,12 +326,13 @@ button:active{
 
 footer {
     background-color: #5c5858;
+    color: white;
     padding: 10px;
     text-align: center;
     bottom: 0;
     height: 5%;
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
   }
 
 
@@ -339,7 +349,8 @@ footer {
     padding-top: 30px;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    background-image: url(/assets/images/leer.png);
+    border-radius: 10px;
+    background-image: url(../../images/leer.png);
     background-repeat: no-repeat;   
     background-size: 55% 40%;
     background-position: center bottom;
@@ -360,7 +371,7 @@ footer {
 
 .modal-content h4{
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     font-size: 15px;
 }
 
@@ -478,7 +489,7 @@ footer {
   .banner-home h1{
       font-size: 55px;
   }
-  
+
   .banner-home h2 {
       font-size: 16px;
   }
